@@ -15,17 +15,18 @@ Alur berpikir yang dibentuk oleh DevOps adalah koordinasi antar tim yang dapat d
 
  **2.	Apa yang anda ketahui tentang Infrastructure?**
  
-Infrastructure merupakan komponen dan sumber daya yang mendukung operasi dan fungsi sistem komputer dan jaringan. Hal tersebut mencakup hardware, software, SDM, serta prosedur yang diperlukan untuk menjalankan dan menjaga lingkungan IT. Dalam bidang DevOps, infrastruktur merujuk pada kombinasi alat, proses, praktik, dan lingkungan yang mendukung pengembangan perangkat lunak yang cepat, pengujian, pengiriman, dan operasional yang efisien. Terdapat beberapa komponen penting dalam infrastruktur DevOps, yaitu otomasisasi, konfigurasi sebagai kode, kontainerisasi, orkestrasi kontainer, pemantauan dan logging, manajemen konfigurasi, pengelolaan versi, dll. Infrastruktur DevOps membantu organisasi merespons perubahan pasar dengan lebih cepat, meningkatkan kualitas perangkat lunak, dan mengurangi risiko dalam pengiriman dan operasi. 
+Infrastructure merupakan komponen dan sumber daya yang mendukung operasi dan fungsi sistem komputer dan jaringan. Hal tersebut mencakup hardware, software, SDM, serta prosedur yang diperlukan untuk menjalankan dan menjaga lingkungan IT. Dalam bidang DevOps, infrastruktur merujuk pada kombinasi alat, proses, praktik, dan lingkungan yang mendukung pengembangan perangkat lunak yang cepat, pengujian, pengiriman, dan operasional yang efisien.
 
 **3.	Apa yang anda ketahui tentang server, sebutkan implementasi berserta contohnya?**
 
 Server merupakan sebuah komputer atau perangkat keras yang digunakan untuk melayani permintaan, mengelola sumber daya dan memberikan layanan kepada klien dalam sebuah jaringan. Beberapa contoh implementasi dari server :
-- Web Server : digunakan untuk menyimpan dan menampilkan website kepada user melalui HTTP. Contohnya : Nginx, Apache HTTP Server.
-- Database Server : digunakan untuk menyimpan, mengelola, dan menyediakan akses data. Contohnya : MySQL, PostgreSQL.
-- File Server: digunakan untuk menyimpan dan membagikan file dalam jaringan. Ini memungkinkan pengguna untuk menyimpan dan mengakses file secara sentral. Contohnya : Windows File Server dan NFS (Network File System).
-- Print Server: digunakan untuk mengelola cetakan jaringan dan memungkinkan pengguna untuk mencetak dari berbagai perangkat dalam jaringan ke printer bersama. Contohnya : Windows Print Server, CUPS (Common Unix Printing System)
-- Proxy Server: digunakan untuk meneruskan permintaan dari klien ke server eksternal. - DNS Server: DNS server menerjemahkan nama domain menjadi alamat IP, memungkinkan pengguna untuk mengakses situs web dengan menggunakan nama daripada angka IP. Contohnya: BIND (Berkeley Internet Name Domain)
-- Application Server: Application server menjalankan aplikasi bisnis dan menyediakan layanan kepada klien. Contohnya: Apache Tomcat
+-	Web Server : digunakan untuk menyimpan dan menampilkan website kepada user melalui HTTP. Contohnya : Nginx, Apache HTTP Server.
+-	Database Server : digunakan untuk menyimpan, mengelola, dan menyediakan akses data. Contohnya : MySQL, PostgreSQL.
+-	File Server: digunakan untuk menyimpan dan membagikan file dalam jaringan. Ini memungkinkan pengguna untuk menyimpan dan mengakses file secara sentral. Contohnya : Windows File Server dan NFS (Network File System).
+-	Print Server: digunakan untuk mengelola cetakan jaringan dan memungkinkan pengguna untuk mencetak dari berbagai perangkat dalam jaringan ke printer bersama. Contohnya : Windows Print Server, CUPS (Common Unix Printing System)
+-	Proxy Server: digunakan untuk meneruskan permintaan dari klien ke server eksternal. Contohnya : Squid, HAProxy
+-	DNS Server: DNS server menerjemahkan nama domain menjadi alamat IP, memungkinkan pengguna untuk mengakses situs web dengan menggunakan nama daripada angka IP. Contohnya: BIND (Berkeley Internet Name Domain)
+-	Application Server: Application server menjalankan aplikasi bisnis dan menyediakan layanan kepada klien. Contohnya: Apache Tomcat
   
 **4.	Mengapa server dibutuhkan dalam pengembangan/development suatu software?**
 
@@ -35,22 +36,19 @@ Penggunaan server dalam pengembangan software membantu memastikan bahwa aplikasi
 
 **5.	Apa yang anda ketahui mengenai Virtualisasi dan Conetainer?**
 
-- Virtualisasi:
-Virtualisasi adalah proses menciptakan versi virtual dari sumber daya fisik, seperti server, jaringan, dan penyimpanan. Ini memungkinkan satu fisik server (host) untuk menjalankan beberapa mesin virtual (VM) yang berjalan secara independen. Setiap VM memiliki sistem operasi dan aplikasi sendiri, sehingga dapat melayani fungsi yang berbeda. Virtualisasi membantu mengoptimalkan penggunaan perangkat keras dan mengisolasi lingkungan, sehingga mengurangi biaya dan meningkatkan efisiensi. VirtualBox merupakan salah satu contoh dari teknologi virtualisasi. 
-- Containerization:
-Containerization adalah teknologi yang memungkinkan aplikasi dan semua dependensinya (seperti perpustakaan, konfigurasi, dan lingkungan) dibungkus dalam wadah yang terisolasi. Ini memungkinkan aplikasi berjalan konsisten di berbagai lingkungan, baik di lingkungan pengembangan, tes, atau produksi. Teknologi kontainer paling terkenal adalah Docker.
-
+- Virtualisasi adalah proses menciptakan versi virtual dari sumber daya fisik, seperti server, jaringan, dan penyimpanan. Ini memungkinkan satu fisik server (host) untuk menjalankan beberapa mesin virtual (VM) yang berjalan secara independen. Setiap VM memiliki sistem operasi dan aplikasi sendiri, sehingga dapat melayani fungsi yang berbeda. Virtualisasi membantu mengoptimalkan penggunaan perangkat keras dan mengisolasi lingkungan, sehingga mengurangi biaya dan meningkatkan efisiensi. VirtualBox merupakan salah satu contoh dari teknologi virtualisasi. 
+- Containerization adalah teknologi yang memungkinkan aplikasi dan semua dependensinya (seperti perpustakaan, konfigurasi, dan lingkungan) dibungkus dalam wadah yang terisolasi. Ini memungkinkan aplikasi berjalan konsisten di berbagai lingkungan, baik di lingkungan pengembangan, tes, atau produksi. Teknologi kontainer paling terkenal adalah Docker.
 
 **6.	Mengapa teknologi container saat ini sangat populer?**
 
 Berikut merupakan beberapa alasan mengapa teknologi container bisa sangat populer: 
-- Skalabilitas: Kontainer memungkinkan aplikasi untuk dikloning dengan cepat dan diperluas secara horizontal. Dengan orkestrasi yang tepat (seperti Kubernetes), aplikasi dapat dijalankan pada banyak kontainer dengan otomatisasi dan manajemen yang mudah.
-- Efisiensi Sumber Daya: Kontainer berbagi kernel host dan dapat dijalankan dalam satu mesin fisik. Ini membuatnya lebih ringan daripada mesin virtual tradisional dan memungkinkan pemanfaatan sumber daya yang lebih efisien.
-- Konsistensi Lingkungan: Dalam kontainer, lingkungan aplikasi terisolasi dan konsisten. Ini mengurangi masalah yang terkait dengan perbedaan lingkungan antara pengembangan, pengujian, dan produksi.
-- Kepopuleran Microservice: Arsitektur microservice, yang melibatkan pemecahan aplikasi menjadi layanan-layanan yang lebih kecil, sangat cocok dengan kontainer. Kontainer memungkinkan setiap layanan atau microservice berjalan dalam kontainer tersendiri, memfasilitasi skalabilitas dan pengelolaan.
-- Dukungan Cloud: Mayoritas penyedia layanan cloud besar mendukung kontainer. Ini memungkinkan perusahaan untuk dengan mudah mengadopsi strategi cloud-native dan menjalankan aplikasi dalam lingkungan yang dioptimalkan untuk kontainer.
-- Automasi: Teknologi kontainer seringkali digunakan bersama dengan orkestrasi, seperti Kubernetes, yang memungkinkan otomatisasi tugas-tugas operasional, pengelolaan skala, dan penanganan kerentanan dengan mudah.
-- Komunitas yang Aktif: Ada komunitas yang besar dan aktif di sekitar teknologi kontainer, dengan banyak sumber daya pembelajaran, alat bantu, dan pertukaran informasi yang tersedia.
+-	Skalabilitas: Kontainer memungkinkan aplikasi untuk dikloning dengan cepat dan diperluas secara horizontal. Dengan orkestrasi yang tepat (seperti Kubernetes), aplikasi dapat dijalankan pada banyak kontainer dengan otomatisasi dan manajemen yang mudah.
+-	Efisiensi Sumber Daya: Kontainer berbagi kernel host dan dapat dijalankan dalam satu mesin fisik. Ini membuatnya lebih ringan daripada mesin virtual tradisional dan memungkinkan pemanfaatan sumber daya yang lebih efisien.
+-	Konsistensi Lingkungan: lingkungan aplikasi terisolasi dan konsisten. Ini mengurangi masalah yang terkait dengan perbedaan lingkungan antara pengembangan, pengujian, dan produksi.
+-	Microservice: memungkinkan setiap layanan atau microservice berjalan dalam kontainer tersendiri, memfasilitasi skalabilitas dan pengelolaan.
+-	Dukungan Cloud: memungkinkan kita mengadopsi strategi cloud-native dan menjalankan aplikasi dalam lingkungan yang dioptimalkan untuk kontainer.
+-	Automasi: memungkinkan otomatisasi tugas-tugas operasional, pengelolaan skala, dan penanganan kerentanan dengan mudah.
+
 
 
 **7.	Apa yang anda ketahui tentang Orchestration Container System?**
